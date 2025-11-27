@@ -1,11 +1,85 @@
-import React from 'react'
+import {
+  Home,
+  Inbox,
+  Calendar,
+  Search,
+  Settings,
+  User2,
+  ChevronUp,
+  Plus,
+  Projector,
+  ChevronDown,
+} from "lucide-react";
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarFooter,
+  SidebarGroup,
+  SidebarGroupContent,
+  SidebarGroupLabel,
+  SidebarHeader,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+} from "@/components/ui/sidebar";
+import Link from "next/link";
+
+const items = [
+  {
+    title: "Home",
+    url: "/",
+    icon: Home,
+  },
+  {
+    title: "Inbox",
+    url: "#",
+    icon: Inbox,
+  },
+  {
+    title: "Calendar",
+    url: "#",
+    icon: Calendar,
+  },
+  {
+    title: "Search",
+    url: "#",
+    icon: Search,
+  },
+  {
+    title: "Settings",
+    url: "#",
+    icon: Settings,
+  },
+];
 
 const AppSidebar = () => {
   return (
-    <div>
-      <h1>App sidebar</h1>
-    </div>
-  )
-}
+    <Sidebar>
+      <SidebarHeader></SidebarHeader>
 
-export default AppSidebar
+      <SidebarContent>
+        <SidebarGroup>
+          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {items.map((item) => (
+                <SidebarMenuItem key={item.title}>
+                  <SidebarMenuButton>
+                    <Link href={item.url} className="flex items-center gap-4">
+                      <item.icon />
+                      <span>{item.title}</span>
+                    </Link>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+      </SidebarContent>
+
+      <SidebarFooter></SidebarFooter>
+    </Sidebar>
+  );
+};
+
+export default AppSidebar;
