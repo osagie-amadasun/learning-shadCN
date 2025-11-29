@@ -20,6 +20,17 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Formatting
+
+Run Prettier before committing to keep the codebase consistent:
+
+```bash
+npm run format        # writes fixes
+npm run format:check  # CI-friendly verification
+```
+
+In VS Code, set `editor.formatOnSave` and select the Prettier extension as the default formatter so files are formatted automatically.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

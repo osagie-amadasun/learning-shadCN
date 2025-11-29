@@ -14,14 +14,15 @@ import { Button } from "@/components/ui/button";
 
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { SidebarTrigger } from "./ui/sidebar";
 
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <nav className="p-4 flex items-center justify-between">
+    <nav className="p-2 flex items-center justify-between sticky top-0 bg-background z-10">
       {/* LEFT */}
-      collapse button
+      <SidebarTrigger className="cursor-pointer" />
       {/* RIGHT */}
       <div className="flex items-center gap-4">
         <Link href={"/"}>Dashboard</Link>
@@ -53,7 +54,7 @@ const Navbar = () => {
             {" "}
             <Avatar>
               <AvatarImage src="https://rivalskins.com/wp-content/uploads/marvel-assets/assets/lord-icons/Adam%20Warlock%20Deluxe%20Avatar.png" />
-              <AvatarFallback>CN</AvatarFallback>
+              <AvatarFallback>OA</AvatarFallback>
               <span className="sr-only">Open user menu</span>
             </Avatar>
           </DropdownMenuTrigger>
