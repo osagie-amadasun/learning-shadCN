@@ -106,6 +106,23 @@ export default function SingleUserpage() {
               </HoverCard>
             </div>
           </div>
+          {/* USER CARD CONTAINER */}
+          <div className="bg-primary-foreground p-4 rounded-lg">
+            <div className="flex items-center gap-3">
+              <Avatar className="size-12">
+                <AvatarImage
+                  src={
+                    "https://rivalskins.com/wp-content/uploads/marvel-assets/assets/lord-icons/Adam%20Warlock%20Deluxe%20Avatar.png"
+                  }
+                />
+                <AvatarFallback>OA</AvatarFallback>
+              </Avatar>
+              <h1 className="text-xl font-bold">Osagie Amadasun</h1>
+            </div>
+            <p className="text-sm text-muted-foreground mt-4">
+              The strange goat🐐.
+            </p>
+          </div>
           {/* INFORMATION CONTAINER */}
           <div className="bg-primary-foreground p-4 rounded-lg">
             <div className="flex items-center justify-between">
@@ -125,8 +142,8 @@ export default function SingleUserpage() {
                 <Progress value={66} />
               </div>
               <div className="flex items-center gap-2">
-                <span className="font-bold">Username:</span>
-                <span>osagie amadasun</span>
+                <span className="font-bold">Full name:</span>
+                <span>Osagie Amadasun</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="font-bold">Email:</span>
@@ -137,40 +154,21 @@ export default function SingleUserpage() {
                 <span>+234 812 5420 580</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="font-bold">Location:</span>
-                <span>Lagos, LA</span>
+                <span className="font-bold">Address:</span>
+                <span>364 boardfish road, Lagos</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="font-bold">Badge:</span>
-                <Badge>Admin</Badge>
+                <span className="font-bold">City:</span>
+                <span>Lagos</span>
               </div>
             </div>
             <p className="text-xs text-muted-foreground mt-4">
               Joined 2025.05.02
             </p>
           </div>
-          {/* CARD LIST CONTAINER */}
-          <div className="bg-primary-foreground p-4 rounded-lg">
-            <CardList title="Recent Transactions" />
-          </div>
         </div>
         {/* RIGHT */}
         <div className="w-full xl:w-2/3 space-y-6">
-          {/* USER CARD CONTAINER */}
-          <div className="bg-primary-foreground p-4 rounded-lg">
-            <div className="flex items-center gap-3">
-              <Avatar className="size-12">
-                <AvatarImage
-                  src={
-                    "https://rivalskins.com/wp-content/uploads/marvel-assets/assets/lord-icons/Adam%20Warlock%20Deluxe%20Avatar.png"
-                  }
-                />
-                <AvatarFallback>OA</AvatarFallback>
-              </Avatar>
-              <h1 className="text-xl font-bold">Osagie Amadasun</h1>
-            </div>
-            <p className="text-sm text-muted-foreground mt-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate ad reprehenderit nesciunt est et ullam magni dolore earum itaque expedita.</p>
-          </div>
           {/* CHART CONTAINER */}
           <div className="bg-primary-foreground p-4 rounded-lg">
             <h1 className="text-xl font-semibold">User Activity</h1>

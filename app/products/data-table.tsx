@@ -48,15 +48,13 @@ export function DataTable<TData, TValue>({
     getSortedRowModel: getSortedRowModel(),
   });
 
-  console.log(rowSelection);
-
   return (
     <div className="overflow-hidden rounded-md border">
       {Object.keys(rowSelection).length > 0 && (
         <div className="flex justify-end mt-2 mr-2">
           <Button variant={"destructive"} className="hover:cursor-pointer text-xs">
             <Trash2 />
-            Delete Payment(s)
+            Delete Product(s)
           </Button>
         </div>
       )}
